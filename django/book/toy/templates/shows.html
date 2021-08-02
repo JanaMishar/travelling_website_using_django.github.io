@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <head>
+
+    {% load static %}
+            
+        <style>
+body {
+  background-image: url('./static/IMG/trip_img.jpg');
+}
+</style>
+        .</head>
+        <table>
+            <tr><td>Place</td>
+            {% for i in op %}
+            <tr>
+                <td>{{ i.place }}</td>
+                <!-- <td>{{ i.email }}</td>
+                <td>{{ i.pwd }}</td> -->
+                <td><a href="dels/{{ i.id }}">delete</a></td>
+                <td><a href="edits/{{ i.id }}">edit</a></td>
+                <td><a href="inserts">insert</a></td> 
+                
+            </tr>
+            {% endfor %}
+        </table>
+
+
+    </body>
+</html>

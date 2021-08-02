@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+<body>
+<form action="../edcodes/{{ f.id }}" method="POST" >
+{% csrf_token %}
+    <label>name:</label>
+    <input type="text" name="place" value="{{ f.place }}">
+    
+</form>
+
+
+
+</body> 
+</html>

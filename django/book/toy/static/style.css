@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ################## html element styling ##############  */
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1,7;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+p, li{
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+}
+
+h1, h2, h3{
+    margin-bottom: 0.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+}
+
+
+/* ################### utility classes #################### */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lg-heading{
+    font-size: 3.5rem;
+}
+
+.md-heading{
+    font-size: 15rem;
+}
+
+.text-red{
+    color: #e63946;
+}
+
+.text-light{
+    color: #f7f0f0;
+}
+
+.text-black{
+    color: rgb(22, 22, 22) Bold;
+}
+
+.text-gray{
+    color: #555;
+}
+
+.bg-dark{
+    background-color: #2a2e31;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary{
+    color: #fff;
+    background: #16a083;
+    box-shadow: 5px 0px 10px 0px #666;
+}
+
+.btn-primary:hover{
+    background: #33758f;
+    transition: backgroud 0.3s ease-in;
+    box-shadow: 5px 0px 10px 0px rgb(46, 24, 24);
+}
+
+.btn-secondary{
+    border: 2.5px solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+    background-color: #fff;
+}
+
+.btn-secondary:hover{
+    background-color: #fcf3f2;
+}
+
+
+/* ############### header styling ################ */
+
+.navbar{
+    background-color: #f2f3f3;
+    padding: 1rem;
+}
+
+.navbar .logo img{
+	height: 60px;
+	width: 250px;
+	padding-left: 40px;
+}
+
+.navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+}
+
+.navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+    color: #f8f6f6;
+}
+
+.navbar a:link,
+.navbar a:visited{
+    color: #0c0a0a;
+    font-weight: 600;
+}
+
+.navbar a{
+    padding-bottom: 0.3rem;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ######## POPUP ######## */
+
+.overlay{
+    background: transparent;
+    z-index: 1;
+    display: none;
+}
+
+.content{
+    position: absolute;
+    padding: 30px;
+    margin-top: 5rem;
+    margin-left: 40rem;
+    top: 19.1%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: rgb(168, 134, 134);
+    width: 400px;
+    height: 170px;
+    z-index: 2;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.close-btn{
+    position: absolute;
+    padding-top: 1px;
+    padding-left: 3px;
+    right: 20px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgb(19, 14, 14);
+    color: rgb(236, 225, 225);
+    font-size: 25px;
+    font-weight: 600px;
+    line-height: 28.5px;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.active .overlay{
+    display: block;
+}
+
+.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+/* ################ Login ################# */
+
+.in{
+    background-color: black;
+    border: black 2px solid;
+    position: relative;
+    height: 95vh;
+    background: url("./IMG/travel-image4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px 0px 0px 60px;
+}
+
+.Sign-in{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15rem 0rem 0px 50rem ; 
+    justify-content: center;
+}
+
+.reg-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.head_change{
+    text-align: center;
+    font-style: oblique;
+}
+
+.register{
+    background-color: rgba(0,0,0,0.5);
+    margin-top: 28px;
+    padding: 5px;
+    width: 33%;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+.reg-group{
+    font-style: italic;
+    font-size: 15px;
+    padding: 0px 0px 0px 30px;
+}
+
+.big_box{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    padding: 3px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.button-mid{
+    padding: 0px 0px 0px 107px;
+}
+
+.seen{
+    position: absolute;
+    font-size: 15px;
+    margin: 5px 0 0 -26px;
+}
+
+
+
+/* ################## Your Trip ################# */
+
+.trip{
+    height: 100vh;
+    width: 100%;
+    background: url("./IMG/trip_img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trip-box{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.trip-button{
+    margin: 25rem 45rem 24rem 48rem;
+}
+
+.trip-btn{
+    font-size: 1.8rem;
+    margin: 0px 6px 0px 6px;
+    background: transparent;
+    border: 3px solid rgb(126, 118, 118);
+    color: white;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+
+
+/* ###################### Slider ####################### */
+
+.slider_back{
+    width: 100%;
+    height: 450px;
+    background: #fff;
+}
+
+.maindiv{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-size: 100% 100%;
+    background-color: #fff;
+    box-shadow: 1px 2px 10px 5px rgb(126, 125, 125);
+    animation: slider 30s infinite linear;
+}
+@keyframes slider {
+    0%{background-image: url(./IMG/switzerland.jpg);}
+    20%{background-image: url(./IMG/Wayanad.jpg);}
+    40%{background-image: url(./IMG/taj-mahal.jpg);}
+    60%{background-image: url(./IMG/twin_tower.jpg);}
+    80%{background-image: url(./IMG/delhi-humayun-tomb.jpg);}
+    100%{background-image: url(./IMG/goa_baga-beach.jpg);}
+}
+
+
+/* ################## About US ################# */
+
+.about_div{
+    padding: 25px 0px 25px 0px;
+    background: rgb(235, 234, 234);
+    
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 1px 2px 10px 5px rgb(126, 124, 124);
+}
+
+.a_h_size{
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    margin: 20px 5px 10px 20px;
+    text-transform: uppercase;
+    color: rgb(20, 20, 25);
+}
+
+.add-com{
+    font-size: 1.2rem;
+    margin: 20px 20px 0px 20px;
+    color: rgb(71, 71, 71),
+}
+
+.about-img{
+    flex: 1 1 300px;
+    height: 300px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-text{
+    flex: 1 1 300px;
+    height: 400px;
+    margin: auto;
+    background-color: #ece9e5;
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+}
+
+
+/* ############### Tourist_places_Index ################  */
+
+.place_head{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: rgb(20, 20, 25);
+}
+
+.place_two{
+    display: flex;
+    justify-content: space-between;
+}
+
+.place_two img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-width: 400px;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+
+.img-content h3{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.img-content a{
+    font-size: 1.2rem;
+}
+
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25rem;
+    background: rgba(0,0,0,0.871);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
+
+
+/* ############### Tourist_places_Page ################  */
+.place {
+	height: 278px;
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid #000;
+}
+
+/* .design-time {
+	font-size: 20px;
+	padding-left: 5px;
+} */
+
+.p-text{
+    float: right;
+    border-left: 1px solid black;
+    width: 68%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.h {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.design{
+    color: chocolate;	
+}
+
+.place-img{
+    padding: 2px;
+}
+
+img {
+	height: 250px; 
+	width: 400px;
+	float: left;
+}
+
+.b{
+	float: right;
+    padding: 7px;
+}
+
+
+
+/* ################ Contact Page Styling ################## */
+
+#contact{
+    padding: 5rem 0;
+    background: rgb(246, 246, 246);
+}
+
+.contact-container{
+    display: flex;
+    background: #fff;
+}
+
+.contact-image{
+    width: 50%;
+}
+
+.contact-image img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.form-container a{
+    font-size: 1.2rem;
+}
+
+
+/* #################### Footer Styling ################### */
+
+#footer{
+    font-size: 2rem;
+    font-weight: 500;
+    background: #333b3f;
+    color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-media-links i{
+    margin: 2rem;
+}
+
+
+/* ############### Admin Login Page #################### */
+
+.admin{
+    height: 100vh;
+    width: 100%;
+    background: url("./IMG/Admin_log.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.admin_box{
+    padding: 3rem;
+    width: 360px;
+    height: 260px;
+    background: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.ad_head{
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.ad_sign{
+    padding-left: 8rem;
+}
+
+
+/* ############### Admin Page #################### */
+
+.maindata{
+    margin-left: 5rem;
+}
+
+.table_row{
+    padding-top: 20px;
+    padding-right: 20rem;
+    font-size: 3rem;
+}
+
+.t_row_lst{
+    padding-top: 20px;
+    padding-right: 5rem;
+    font-size: 3rem;
+}
+
+.table_btn{
+    font-size: 1rem;
+}
+
+.table_col{
+    padding: 0px 4px 0px 4px;
+}

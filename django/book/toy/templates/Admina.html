@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4a5f59fc5b.js" crossorigin="anonymous"></script> 
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <title>TRAVEL WEBSITE</title>
+</head>
+
+<body>
+    {% csrf_token %}
+
+    <div class="admin">
+
+            <div class="admin_box">
+                
+                <form action="adpow" method="post"> {% csrf_token %}
+                    
+                    <h1 class="lg-heading text-light ad_head">Sign In</h1>
+
+                    
+                        <input type="text" name="uname" placeholder="Username" id="uname" class="big_box">
+                        <i class="fas fa-user-cog seen"></i><br>
+                    <br>
+                    
+                        <input type="text" name="pswd" placeholder="Password" id="pswd" class="big_box">
+                        <i class="fas fa-eye-slash pws seen" onclick="show()"></i>
+                    <br>
+                    
+                    <div class="ad_sign">
+                        <input type="submit" name="submit" class="btn btn-primary" value="signin">
+                    </div>
+                
+                </form>
+
+                <?php
+
+                    if(isset($_POST['submit'])){
+                        $name=$_POST['uname'];
+                        $pass=$_POST['pswd'];
+
+                        if(($name==="admin") && ($pass="admin")){
+                            header('location:shows.html');
+                        }else{
+                            echo 'password not matched';
+                        }
+                    }
+
+                ?>
+            
+            </div>
+        
+        </div>
+       
+    </div>
+
+    <script>
+
+        function show(){
+            var Paswrd = document.getElementById('Paswrd');
+            var icon = document.querySelector('.pws');
+            if (Paswrd.type === "password") {
+                Paswrd.type = "text";
+            }else{
+                Paswrd.type = "password";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

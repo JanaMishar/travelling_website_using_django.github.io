@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4a5f59fc5b.js" crossorigin="anonymous"></script> 
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <title>TRAVEL WEBSITE</title>
+</head>
+
+<body>
+
+    <header class='header'>
+        
+        <nav class='navbar'>
+                
+            <div class="container">
+
+                <div class="logo">
+                    <img src="./static/IMG/logo.png">
+                </div>
+                
+                <ul class='nav-items'>
+                    <li class="nav-item"><a href="indexhome">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="./trip.html">Your Trip</a></li>
+                    <li class="nav-item">
+                            
+                            <a href="#Helpline" onclick="togglepopup()">Helpline</a>
+                            
+                            <div class="popup" id="popup-1">
+                                
+                                <div class="overlay"></div>
+                                
+                                <div class="content">
+                                
+                                <div class="close-btn" onclick="togglepopup()">&times;</div>
+                                <br>
+    
+                                <ul class='help'>
+                                    <li class="help-item">
+                                        <a href="">+919875347473</a>
+                                    </li>
+                                    <li class="help-item">
+                                        <a href="">+917001190778</a>
+                                    </li>
+                                    <li class="help-item">
+                                        <a href="">greentravel21@gmail.com</a>
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        
+                        </div>
+                    
+                    </li>
+                    
+                    
+    
+                    <li class="nav-item"><a href="./Admin_login.html">Admin</a></li>
+                
+                </ul>
+                
+            </div>
+            
+        </nav>
+    </header>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/sikkim.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Sikkim</h2>
+        
+        <p class="design">5 days,4 nights</p>
+        
+        <p class="design">Gangtok, Pelling, Nathula Pass, Ravangla, Namchi, Yumthang Valley, Gurudongmar.</p>
+        
+        <p class="design">Rs. 61,345</p>
+        
+        <div class="b">
+            <a href="signin" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/rajasthan.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Rajasthan</h2>
+        
+        <p class="design">9 days,10 nights</p>
+        
+        <p class="design">Udaipur, Pushkar, Jodhpur, Jaipur, Chittorgarh, Bikaner, Ajmer, Jaisalmer, Mount Abu.</p>
+        
+        <p class="design">Rs. 1,02,350</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/madhya_pradesh.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Madhya Pradesh</h2>
+        
+        <p class="design">9 days,8 nights</p>
+        
+        <p class="design">Gwalior, Sanchi, Ujjain, Indore, Bhopal, Bhimbetka, Chanderi, Rajwada, Patalpani Falls, Choral Dam, Lotus Lake, Ralamandal.</p>
+        
+        <p class="design">Rs. 97,999</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/kerala.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Kerala</h2>
+        
+        <p class="design">8 days,9 nights</p>
+        
+        <p class="design">Alleppey, Kovalam, Kozhikode, Kasargod, Thrissur, Cochin, Sabarimala, Wayanad, Munnar, Kumarakom, Kollam.</p>
+        
+        <p class="design">Rs. 1,01,765</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/punjab.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Punjab</h2>
+        
+        <p class="design">8days,7 nights</p>
+        
+        <p class="design">Amritsar, Jalandhar, Ludhiana, Patiala, Pathankot, Anandpur Sahib, Sirhind.</p>
+        
+        <p class="design">Rs. 74,350</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/odisha.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Odisha</h2>
+        
+        <p class="design">7days,6 nights</p>
+        
+        <p class="design">Puri, Konark, Cuttack, Barbil, Sambalpur, Rourkela, Bhubaneswar, Paradip.</p>
+        
+        <p class="design">Rs. 55,640</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/himachal_pradesh.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Himachal Pradesh</h2>
+        
+        <p class="design">7 days,6 nights</p>
+        
+        <p class="design">Shimla, Dharamshala, Kasauli, Kullu-Manali, Spiti Valley, Chitkul, Bir Billing.</p>
+        
+        <p class="design">Rs. 1,04,545</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/jammu_kashmir.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Jammu & Kashmir</h2>
+        
+        <p class="design">10 days,9 nights</p>
+        
+        <p class="design">Srinagar, Gulmarg, Amarnath, Jammu, Pahalgam, Kargil, Leh, Yusmarg, Sonmarg, Gurez Valley.</p>
+        
+        <p class="design">Rs. 1,10,710</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/goa.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Goa</h2>
+        
+        <p class="design">8 days,7 nights</p>
+        
+        <p class="design">Panaji, Margao, Old Goa, Vasco Da Gama, Baga Beach, Roam at Tito's Street, Anjuna Beach, Dudhsagar Waterfalls, Fort Aguada.</p>
+        
+        <p class="design">Rs. 89,430</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+    
+    <div class="place">
+        
+        <div class="place-img">
+            <img src="./static/IMG/new_delhi.jpg">
+        </div>
+        
+        <div class="p-text">
+
+            <h2 class="h">Delhi</h2>
+        
+        <p class="design">9 days,8 nights</p>
+        
+        <p class="design">New & Old Delhi, Red Fort, Qutub Minar, Gurudwara Bangla Sahib, India Gate, Jama Masjid, Humayun's Tomb, Rashtrapati Bhavan, Gandhi Smriti.</p>
+        
+        <p class="design">Rs. 1,00,000</p>
+        
+        <div class="b">
+            <a href="signin" type="submit" class="btn btn-primary">Book Trip</a>
+        </div>
+    
+        </div>
+        
+    </div>
+
+    <footer id="footer">
+   
+        <div class="social-media-links">
+            
+            <i class="fab fa-facebook-square fa-2x"></i>
+            
+            <i class="fab fa-instagram-square fa-2x"></i>
+            
+            <i class="fab fa-twitter-square fa-2x"></i>
+        
+        </div>
+        
+        <p>Restraunt Website &copy; all rights reserved</p>
+    
+    </footer>
+
+
+    <script>
+        $(document).ready(function(){
+        
+          $("a").on('click', function(event) {
+        
+            if (this.hash !== "") {
+            
+              event.preventDefault();
+            
+              var hash = this.hash;
+        
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+        
+                window.location.hash = hash;
+              });
+            }
+          });
+        });
+        
+        
+        function togglepopup(){
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+        
+        
+        
+        </script>
+
+</body>
+
+</html>

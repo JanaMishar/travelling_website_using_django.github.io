@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4a5f59fc5b.js" crossorigin="anonymous"></script>
+    {% load static %} 
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+    <title>TRAVEL WEBSITE</title>
+</head>
+
+<body>
+    
+      
+    <div class="in container">
+
+        <div class="reg-main">
+
+            <div class="register">
+            
+                <form method="POST" action="reg">
+                    {% csrf_token %}
+                    
+                    <h1 class="lg-heading text-black head_change">Sign Up</h1>
+                    
+                    <div class="reg-group">
+                        <label for="FName">Full Name:</label><br>
+                        <input type="text" name="name" id="FName" placeholder="Enter Your Full Name" class="big_box" required><br>
+                    </div><br>
+                    
+                    <div class="reg-group">
+                        <label for="Email">Email:</label><br>
+                        <input type="email" name="email" id="Email" placeholder="Enter A Valid Email ID" class="big_box" required><br>
+                       </div><br>
+                    
+                       <div class="reg-group">
+                        <label for="Phone">Phone:</label><br>
+                        <input type="" name="no" id="Phone" placeholder="Enter Your Phone Number" class="big_box" required><br>
+                    </div><br>
+                    
+                    <div class="reg-group">
+                        <label for="Age">Date Of Birth:</label><br>
+                        <input type="" name="DOB" id="Date" placeholder="Enter Birth Date" class="big_box" required><br>
+                    </div><br>
+                    
+                    <div class="reg-group">
+                        <label for="Gender">Gender:</label><br>
+                        &nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Gender" id="Male">
+                        &nbsp;
+                        <span id="Male">Male</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Gender" id="Female">
+                        &nbsp;
+                        <span id="Female">Female</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="Gender" id="Other">
+                        &nbsp;
+                        <span id="Other">Other</span>
+                    </div><br>
+    
+                    <div class="reg-group">
+                        <label for="Password">Password:</label><br>
+                        <input type="password" name="pwd" id="Password" placeholder="Enter Your Password" class="big_box" required><br>
+                        <i class="fas fa-eye-slash pws seen" onclick="show()"></i>
+                    </div><br>
+                    
+                    <div class="reg-group">
+                        <label for="Password">Confirm Password:</label><br>
+                        <input type="" name="Password" id="Password" placeholder="Confirm Your Password" class="big_box" required><br>
+                        <i class="fas fa-eye-slash pws seen" onclick="show()"></i>
+                    </div>
+                    
+                    
+                    <div class="button-mid">
+                        <button type="submit" class="btn btn-primary">submit</button>
+                        <br><br>
+                    </div>
+                
+                </form>
+            
+            </div>
+        
+        </div>
+
+    </div>
+    <script>
+
+        function show(){
+            var Paswrd = document.getElementById('Paswrd');
+            var icon = document.querySelector('.pws');
+            if (Paswrd.type === "password") {
+                Paswrd.type = "text";
+            }else{
+                Paswrd.type = "password";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
